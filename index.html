@@ -3,62 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sadik Ansari | Full-Stack Developer</title>
+    <title>Sadik Ansari | Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="dark-mode">
+    <!-- Particles Background -->
+    <div class="particles" id="particles"></div>
+
     <!-- Header -->
-    <header id="header">
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">Sadik</a>
-                <div class="nav-links">
-                    <a href="#hero" class="active">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">Sadik<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
                     <button class="theme-toggle" id="themeToggle">
                         <i class="fas fa-moon"></i>
                     </button>
-                </div>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
+                </li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </header>
 
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="mobileThemeToggle">
+            <i class="fas fa-moon"></i> Switch Theme
+        </button>
+    </div>
+
+    <!-- Overlay for mobile menu -->
+    <div class="overlay" id="overlay"></div>
+
     <!-- Hero Section -->
-    <section id="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Full-Stack Web Developer</h1>
-                <p>I build exceptional digital experiences with modern web technologies. Currently enhancing my skills in React and Next.js while preparing for B.Tech IT.</p>
-                <div class="hero-btns">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-text fade-in">
+                <h1>Hi, I'm <span class="highlight">Sadik Ansari</span> — Web Developer</h1>
+                <p>I build fast, modern, and beautiful websites with React, Next.js, and PHP.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn">View My Work</a>
                     <a href="#contact" class="btn btn-outline">Contact Me</a>
                 </div>
             </div>
+            <div class="hero-image">
+                <div class="profile-img">
+                    <img src="./me.jpg" alt="Sadik Ansari">
+                </div>
+            </div>
         </div>
-        <div class="hero-shape"></div>
-        <div class="hero-shape-2"></div>
     </section>
 
     <!-- About Section -->
     <section id="about">
         <div class="container">
-            <h2>About Me</h2>
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
             <div class="about-content">
-                <div class="about-text">
-                    <p>Hello! I'm Sadik Ansari, a passionate Full-Stack Developer with a Diploma in Information and Communication Technology (completed 2025). I specialize in building functional web applications using JavaScript across the stack.</p>
-                    <p>My journey in web development began during my diploma studies, where I discovered my passion for creating digital solutions. I've since worked on various projects ranging from management systems to interactive web applications.</p>
-                    <p>Currently, I'm focused on mastering modern frameworks like React and Next.js while preparing for lateral entry into B.Tech IT program to further enhance my technical knowledge.</p>
-                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or learning about UI/UX design principles.</p>
+                <div class="about-text fade-in">
+                    <p>I'm a 19-year-old web developer with a Diploma in Information Communication and Technology. I specialize in creating responsive, high-performance, and modern websites using the latest technologies.</p>
+                    <p>I have completed React.js and I'm currently learning Next.js. My passion lies in both frontend and backend development, creating seamless user experiences with creative UI design.</p>
+                    <p>I'm dedicated to delivering high-quality solutions that meet client requirements while maintaining clean code and modern design principles.</p>
                 </div>
-                <div class="about-image">
-                    <img src="me.jpg" alt="Developer working">
+                <div class="skills-categories fade-in">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> Frontend</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">Next.js</span>
+                            <span class="skill-tag">Bootstrap</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-server"></i> Backend</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">Next.js API</span>
+                            <span class="skill-tag">MySQL</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -67,50 +116,69 @@
     <!-- Skills Section -->
     <section id="skills">
         <div class="container">
-            <h2>Technical Skills</h2>
+            <div class="section-title">
+                <h2>My Skills</h2>
+            </div>
             <div class="skills-container">
-                <div class="skill-category hidden">
-                    <h3><i class="fas fa-code"></i> Frontend</h3>
-                    <ul>
-                        <li>HTML5 & CSS3</li>
-                        <li>JavaScript (ES6+)</li>
-                        <li>Bootstrap 5</li>
-                        <li>EJS Templates</li>
-                        <li>React.js (Learning)</li>
-                        <li>Next.js (Learning)</li>
-                    </ul>
+                <div class="skill-item fade-in">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="95"></div>
+                    </div>
+                    <p>95%</p>
                 </div>
-                
-                <div class="skill-category hidden">
-                    <h3><i class="fas fa-server"></i> Backend</h3>
-                    <ul>
-                        <li>Node.js (Express.js)</li>
-                        <li>PHP (Basic)</li>
-                        <li>MySQL</li>
-                        <li>Sequelize ORM</li>
-                    </ul>
+                <div class="skill-item fade-in">
+                    <div class="skill-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90"></div>
+                    </div>
+                    <p>90%</p>
                 </div>
-                
-                <div class="skill-category hidden">
-                    <h3><i class="fas fa-cogs"></i> Full-Stack</h3>
-                    <ul>
-                        <li>MVC Architecture</li>
-                        <li>REST API Development</li>
-                        <li>CRUD Operations</li>
-                        <li>Form Handling & Validation</li>
-                        <li>Basic Authentication</li>
-                        <li>Git & GitHub</li>
-                    </ul>
+                <div class="skill-item fade-in">
+                    <div class="skill-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="85"></div>
+                    </div>
+                    <p>85%</p>
                 </div>
-                
-                <div class="skill-category hidden">
-                    <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
-                    <ul>
-                        <li>GitHub Pages</li>
-                        <li>Vercel</li>
-                        <li>Postman</li>
-                        <li>VS Code</li>
-                    </ul>
+                <div class="skill-item fade-in">
+                    <div class="skill-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3>React.js</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="80"></div>
+                    </div>
+                    <p>80%</p>
+                </div>
+                <div class="skill-item fade-in">
+                    <div class="skill-icon">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <h3>PHP</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="75"></div>
+                    </div>
+                    <p>75%</p>
+                </div>
+                <div class="skill-item fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>MySQL</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="70"></div>
+                    </div>
+                    <p>70%</p>
                 </div>
             </div>
         </div>
@@ -119,100 +187,142 @@
     <!-- Projects Section -->
     <section id="projects">
         <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="projects-container">
-                <div class="project-card hidden">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Quiz Manager">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Quiz Manager</h3>
-                        <p class="project-description">Feature-rich quiz platform with teacher portal, dynamic MCQ creation, secure access, and real-time scoring.</p>
-                        <div class="project-stack">
-                            <span class="stack-item">Node.js</span>
-                            <span class="stack-item">Express</span>
-                            <span class="stack-item">MySQL</span>
-                            <span class="stack-item">EJS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+            <div class="section-title">
+                <h2>My Projects</h2>
+            </div>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card fade-in" data-category="fullstack">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Railway Reservation System">
+                        <div class="project-overlay">
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
-                </div>
-                
-                <div class="project-card hidden">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Online Test Management">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Online Test Management</h3>
-                        <p class="project-description">Complete test system with role-based access, single-attempt logic, and result management.</p>
-                        <div class="project-stack">
-                            <span class="stack-item">Node.js</span>
-                            <span class="stack-item">Sequelize</span>
-                            <span class="stack-item">MySQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        </div>
+                    <div class="project-info">
+                        <h3>Railway Reservation System</h3>
+                        <p>A comprehensive system for booking train tickets with user authentication, payment processing, and admin panel.</p>
                     </div>
                 </div>
-                
-                <div class="project-card hidden">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80" alt="Library Management">
+                <div class="project-card fade-in" data-category="fullstack">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Library Management System">
+                        <div class="project-overlay">
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Library Management</h3>
-                        <p class="project-description">Student data management system with CRUD operations and table display.</p>
-                        <div class="project-stack">
-                            <span class="stack-item">Node.js</span>
-                            <span class="stack-item">MySQL</span>
-                            <span class="stack-item">Bootstrap</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        </div>
+                    <div class="project-info">
+                        <h3>Library Management System</h3>
+                        <p>Digital solution for managing library operations including book tracking, member management, and borrowing system.</p>
                     </div>
                 </div>
-                
-                <div class="project-card hidden">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="GST Invoice Generator">
+                <div class="project-card fade-in" data-category="fullstack">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Quiz Management System">
+                        <div class="project-overlay">
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">GST Invoice Generator</h3>
-                        <p class="project-description">Printable invoice template with automatic GST calculations and responsive design.</p>
-                        <div class="project-stack">
-                            <span class="stack-item">HTML</span>
-                            <span class="stack-item">CSS</span>
-                            <span class="stack-item">Bootstrap</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        </div>
+                    <div class="project-info">
+                        <h3>Quiz Management System</h3>
+                        <p>Interactive platform for creating, managing, and taking quizzes with real-time scoring and analytics.</p>
                     </div>
                 </div>
-                
-                <div class="project-card hidden">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80" alt="Java Billing System">
+            </div>
+            <div class="view-all">
+                <a href="#" class="btn">View All Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Pricing</h2>
+            </div>
+            <div class="pricing-container">
+                <div class="pricing-card fade-in">
+                    <div class="pricing-header">
+                        <h3>Basic</h3>
+                        <div class="price">$199<span>/project</span></div>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Java Billing System</h3>
-                        <p class="project-description">Desktop application for product billing with discount handling and invoice generation.</p>
-                        <div class="project-stack">
-                            <span class="stack-item">Java Swing</span>
-                            <span class="stack-item">MySQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> Up to 5 Pages</li>
+                        <li><i class="fas fa-check"></i> Contact Form</li>
+                        <li><i class="fas fa-times"></i> CMS Integration</li>
+                        <li><i class="fas fa-times"></i> E-commerce Functionality</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                </div>
+                <div class="pricing-card popular fade-in">
+                    <div class="popular-tag">Popular</div>
+                    <div class="pricing-header">
+                        <h3>Standard</h3>
+                        <div class="price">$499<span>/project</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Basic</li>
+                        <li><i class="fas fa-check"></i> Up to 10 Pages</li>
+                        <li><i class="fas fa-check"></i> CMS Integration</li>
+                        <li><i class="fas fa-check"></i> Basic Animations</li>
+                        <li><i class="fas fa-times"></i> E-commerce Functionality</li>
+                    </ul>
+                    <a href="#contact" class="btn">Get Started</a>
+                </div>
+                <div class="pricing-card fade-in">
+                    <div class="pricing-header">
+                        <h3>Premium</h3>
+                        <div class="price">$899<span>/project</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Standard</li>
+                        <li><i class="fas fa-check"></i> Unlimited Pages</li>
+                        <li><i class="fas fa-check"></i> Advanced Animations</li>
+                        <li><i class="fas fa-check"></i> E-commerce Functionality</li>
+                        <li><i class="fas fa-check"></i> SEO Optimization</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 30px; color: var(--text-secondary);">Website charges depend on the features, animations, and client demand.</p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <div class="section-title">
+                <h2>Education</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022 - 2023</div>
+                        <h3>Diploma in ICT</h3>
+                        <p>Completed Diploma in Information Communication and Technology with focus on web development fundamentals.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023</div>
+                        <h3>React.js</h3>
+                        <p>Completed comprehensive React.js course covering components, hooks, state management, and routing.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024</div>
+                        <h3>Next.js</h3>
+                        <p>Currently learning Next.js with focus on server-side rendering, API routes, and full-stack development.</p>
                     </div>
                 </div>
             </div>
@@ -220,79 +330,299 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item hidden">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Email</h3>
-                            <a href="mailto:ansarisadik2006@gmail.com">ansarisadik2006@gmail.com</a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item hidden">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Phone</h3>
-                            <a href="tel:+916353811919">+91 6353811919</a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item hidden">
-                        <div class="contact-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>GitHub</h3>
-                            <a href="https://github.com/sadik786786" target="_blank">github.com/sadik786786</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form hidden">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" class="form-control" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>Contact Me</h2>
+    </div>
+    <div class="contact-container">
+      <div class="contact-info">
+
+        <a href="mailto:ansarisadik2006@gmail.com" class="contact-item fade-in" target="_blank">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-details">
+            <h3>Email</h3>
+            <p>ansarisadik2006@gmail.com</p>
+          </div>
+        </a>
+
+        <a href="https://wa.me/916353811919" class="contact-item fade-in" target="_blank">
+          <div class="contact-icon">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <div class="contact-details">
+            <h3>WhatsApp</h3>
+            <p>+91 635 381 1919</p>
+          </div>
+        </a>
+
+        <a href="https://instagram.com/epsilon_code" class="contact-item fade-in" target="_blank">
+          <div class="contact-icon">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <div class="contact-details">
+            <h3>Instagram</h3>
+            <p>@epsilon_code
+</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/sadik786786" class="contact-item fade-in" target="_blank">
+          <div class="contact-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="contact-details">
+            <h3>GitHub</h3>
+            <p>github.com/sadik786786</p>
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/sadik-ansari-239b5733b/" class="contact-item fade-in" target="_blank">
+          <div class="contact-icon">
+            <i class="fab fa-linkedin"></i>
+          </div>
+          <div class="contact-details">
+            <h3>LinkedIn</h3>
+            <p>linkedin.com/in/sadikansari</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="social-links">
+      <a href="https://facebook.com" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com/sadik_ansari" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/in/sadikansari" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/sadik786786" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+</section>
+
 
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <a href="#" class="logo">Sadik.</a>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/sadik786786" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="footer-logo">Sadik<span>.</span></a>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="back-to-top" id="backToTop">
+                    <i class="fas fa-arrow-up"></i>
                 </div>
-                <p class="copyright">© 2023 Sadik Ansari. All rights reserved.</p>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Sadik Ansari — All Rights Reserved</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+        const body = document.body;
+        
+        function toggleTheme() {
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                mobileThemeToggle.innerHTML = '<i class="fas fa-sun"></i> Switch Theme';
+            } else {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                mobileThemeToggle.innerHTML = '<i class="fas fa-moon"></i> Switch Theme';
+            }
+        }
+        
+        themeToggle.addEventListener('click', toggleTheme);
+        mobileThemeToggle.addEventListener('click', toggleTheme);
+
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileNav = document.getElementById('mobileNav');
+        const overlay = document.getElementById('overlay');
+        
+        function toggleMobileMenu() {
+            mobileNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        }
+        
+        mobileMenu.addEventListener('click', toggleMobileMenu);
+        overlay.addEventListener('click', toggleMobileMenu);
+        
+        // Close mobile menu when clicking on a link
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', toggleMobileMenu);
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Scroll to show/hide back to top button
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'flex'; // Always show for demo
+            }
+        });
+
+        // Skill Progress Animation
+        const skillBars = document.querySelectorAll('.skill-progress');
+        
+        function animateSkillBars() {
+            skillBars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                bar.style.width = width + '%';
+            });
+        }
+
+        // Fade In Animation on Scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        function checkFade() {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                    
+                    // Animate skill bars when skills section is in view
+                    if (element.closest('#skills')) {
+                        animateSkillBars();
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkFade);
+        window.addEventListener('load', checkFade);
+
+        // Project Filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                projectCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Particles Background
+        const particlesContainer = document.getElementById('particles');
+        
+        function createParticles() {
+            const particleCount = 15;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random size between 50px and 150px
+                const size = Math.random() * 100 + 50;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random position
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                
+                // Random animation delay and duration
+                particle.style.animationDelay = `${Math.random() * 20}s`;
+                particle.style.animationDuration = `${15 + Math.random() * 10}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        createParticles();
+
+        // Click Effect
+        document.addEventListener('click', function(e) {
+            const clickEffect = document.createElement('div');
+            clickEffect.classList.add('click-effect');
+            clickEffect.style.left = `${e.clientX}px`;
+            clickEffect.style.top = `${e.clientY}px`;
+            
+            document.body.appendChild(clickEffect);
+            
+            setTimeout(() => {
+                clickEffect.remove();
+            }, 500);
+        });
+
+        // Profile Image Tilt Effect
+        const profileImg = document.querySelector('.profile-img');
+        
+        profileImg.addEventListener('mousemove', (e) => {
+            const rect = profileImg.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+            
+            profileImg.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+        });
+        
+        profileImg.addEventListener('mouseleave', () => {
+            profileImg.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+        });
+    </script>
 </body>
 </html>
